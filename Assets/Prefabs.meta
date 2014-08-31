@@ -1,9 +1,13 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 15e5cf5b64e874edb9018dc9fb6635e0
+<<<<<<< HEAD:Assets/Prefabs.meta
+guid: 4cd032d35038ee94a97f276db08c16e1
 =======
-guid: eea79cd86a8ad4cc887f1240bfdcb0b3
->>>>>>> origin/master
+<<<<<<< HEAD
+guid: 36f30881980294f0cb0d073fe11ace9d
+=======
+guid: 123d7f72890634007a4fbfdc5da00974
+>>>>>>> 4d9887d002c340d1f9ac36df731fefecade9bfca
+>>>>>>> master:Assets/scenes.meta
 folderAsset: yes
 DefaultImporter:
   userData: 
