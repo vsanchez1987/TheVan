@@ -21,9 +21,7 @@ public class charater_movement : MonoBehaviour {
 	float rotationY = 0F;
 
 	void Start () {
-	/*
-		if (rigidbody)
-			rigidbody.freezeRotation = true;*/
+
 	}
 
 	void Update () {
@@ -32,10 +30,11 @@ public class charater_movement : MonoBehaviour {
 
 		if (axes == RotationAxes.MouseXAndY)
 		{
-			float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
-			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-			transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+			transform.Rotate(  Input.GetAxis("Mouse Y") * -sensitivityY, Input.GetAxis("Mouse X") * sensitivityX,0);
+			//float rotationX = /*transform.localEulerAngles.y*/ + Input.GetAxis("Mouse X") * sensitivityX;
+			//rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+			//rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
+			//transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
 		}
 		else if (axes == RotationAxes.MouseX)
 		{
@@ -43,57 +42,36 @@ public class charater_movement : MonoBehaviour {
 		}
 		else
 		{
-			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-			transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
+			transform.Rotate( Input.GetAxis("Mouse Y") * -sensitivityY,0,0);
+			//rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+			//rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
+			//transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
 		}
 
 
 		if (Input.GetKey ("a")) { 
-			//this.rigidbody.velocity = new Vector3(-speed,0.0f,0.0f);
 			movement.x -= 1f;
 
 		}
 
-
 		if (Input.GetKey ("d")) {
-			//this.rigidbody.velocity = new Vector3(speed,0.0f,0.0f);
 			movement.x += 1f;
 		}
 		
 		if (Input.GetKey ("w")) {		
-			//this.rigidbody.velocity = Vector3.forward * speed;	
 			movement.z += 1f;
 		}
 
 		if (Input.GetKey ("s")) {		
-			//this.rigidbody.velocity = new Vector3(0.0f,0.0f,-speed);
 			movement.z -= 1f;
 		}
 
-		/*
-		if (Input.GetKey ("a") && Input.GetKey ("w")) {		
-			this.rigidbody.velocity = new Vector3(-speed,0.0f,speed);
-		}
-
-		if (Input.GetKey ("a") && Input.GetKey ("s")) {		
-			this.rigidbody.velocity = new Vector3(-speed, 0.0f, -speed);
-		}
-
-		if (Input.GetKey ("d") && Input.GetKey ("w")) {
+		if (Input.GetKeyUp ("a") || Input.GetKeyUp ("s") || Input.GetKeyUp ("w") || Input.GetKeyUp ("d")) {
 			
-			this.rigidbody.velocity = new Vector3(speed, 0.0f, speed);
+			this.rigidbody.velocity = new Vector3(0.0f,-0.17342f,0.0f);
+			
 		}
 
-		if (Input.GetKey ("d") && Input.GetKey ("s")) {	
-			this.rigidbody.velocity = new Vector3(speed, 0.0f, -speed);
-		}
-		
-		
-		if (Input.GetKeyUp ("a") || Input.GetKeyUp ("s") || Input.GetKeyUp ("w") || Input.GetKeyUp ("d")) {		
-			this.rigidbody.velocity = new Vector3(0.0f,0.0f,0.0f);
-		}
-*/
 		transform.Translate( movement * Time.deltaTime );
 	}
 }
