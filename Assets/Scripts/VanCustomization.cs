@@ -8,15 +8,34 @@ public class VanCustomization : MonoBehaviour
 	public GameObject item;
 	public Transform target;
 	public bool isOn = false;
+	public Camera vanCam;
+	public Camera mainCamera;
+	
+	private GameObject van;
+	private CharacterInventory playerInventory;
 
+	public List<string> copyInventory = new List<string>();
+
+	void Awake()
+	{
+		van = GameObject.FindGameObjectWithTag ("Van");
+		playerInventory = GameObject.FindWithTag ("Player").GetComponent<CharacterInventory> ();
+		DontDestroyOnLoad (van);
+
+		foreach (var str in playerInventory.inventory) {
+			copyInventory.Add (str.name);
+		}
+	}
+	
 	public void OnClick()
 	{
 		isOn = true;
 		item = GameObject.Find ("Chainsaw");
-		Debug.Log (item);
+
+		OnTarget ();
 	}
 
-	void Update()
+	void OnTarget()
 	{
 		target = GameObject.Find (gameObject.name + "_gm").transform;
 
@@ -25,5 +44,11 @@ public class VanCustomization : MonoBehaviour
 			item.renderer.enabled = true;
 		}
 		isOn = false;
+	}
+
+	public void OnExit()
+	{
+		vanCam.enabled = false;
+		mainCamera.enabled = true;
 	}
 }
