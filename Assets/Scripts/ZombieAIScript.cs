@@ -6,7 +6,7 @@ public class ZombieAIScript : MonoBehaviour
 	public Transform target;
 	public State currentState;
 	public float attackRange = 1.0f;
-	public float speed = 1.5f;
+	public float speed = 5.0f;
 
 	private SphereCollider chaseRadius;
 
@@ -23,20 +23,6 @@ public class ZombieAIScript : MonoBehaviour
 
 	void Update()
 	{
-<<<<<<< HEAD
-		if(currentState == State.Attack) {
-			if(target != null) {
-				Vector3 direction = target.transform.position - transform.position;
-				direction.y = 0.0f;
-
-				transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.LookRotation(direction),
-				                                      Time.deltaTime);
-
-				if(direction.magnitude > attackRange) {
-					Vector3 moveVector = direction.normalized * speed * Time.deltaTime;
-					transform.position += moveVector;
-				}
-=======
 		if (target != null) {
 
 			if (currentState == State.Attack) {
@@ -50,7 +36,6 @@ public class ZombieAIScript : MonoBehaviour
 							Vector3 moveVector = direction.normalized * speed * Time.deltaTime;
 							transform.position += moveVector;
 					}
->>>>>>> master
 			}
 		}
 	}
