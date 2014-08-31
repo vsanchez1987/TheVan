@@ -1,6 +1,18 @@
 ﻿<Properties>
 <<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../TimGlasser/fsm/WaypointScript.cs">
+    <Files>
+      <File FileName="Assets/Scripts/health.cs" Line="18" Column="21" />
+      <File FileName="Assets/bullet.cs" Line="16" Column="48" />
+      <File FileName="Assets/Scripts/camera_movement.cs" Line="33" Column="32" />
+      <File FileName="Assets/Scripts/ZombieAIScript.cs" Line="26" Column="24" />
+      <File FileName="Assets/Scripts/charater_movement.cs" Line="60" Column="4" />
+      <File FileName="Assets/Scripts/spawner.cs" Line="18" Column="21" />
+      <File FileName="../TimGlasser/fsm/WaypointScript.cs" Line="41" Column="35" />
+=======
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/MoveVan.cs">
     <Files>
       <File FileName="Assets/scripts/MoveVan.cs" Line="143" Column="22" />
@@ -16,6 +28,7 @@
       <File FileName="Assets/Scripts/camera_movement.cs" Line="15" Column="2" />
       <File FileName="Assets/Scripts/ZombieAIScript.cs" Line="33" Column="42" />
       <File FileName="Assets/Scripts/spawner.cs" Line="18" Column="25" />
+>>>>>>> origin/master
 >>>>>>> origin/master
     </Files>
   </MonoDevelop.Ide.Workbench>
