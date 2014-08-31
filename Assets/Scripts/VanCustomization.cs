@@ -10,6 +10,7 @@ public class VanCustomization : MonoBehaviour
 	public bool isOn = false;
 	public Camera vanCam;
 	public Camera mainCamera;
+<<<<<<< HEAD
 	public int index;
 	public Text text;
 
@@ -50,6 +51,32 @@ public class VanCustomization : MonoBehaviour
 		if (isOn) {
 			target = GameObject.Find (_sender.name + "_gm").transform;
 			item = GameObject.Find(item.name + "_van");
+=======
+	
+	private GameObject van;
+	private CharacterInventory playerInventory;
+
+	void Awake()
+	{
+		van = GameObject.FindGameObjectWithTag ("Van");
+		playerInventory = GameObject.FindWithTag ("Player").GetComponent<CharacterInventory> ();
+		DontDestroyOnLoad (van);
+	}
+	
+	public void OnClick()
+	{
+		isOn = true;
+		item = GameObject.Find ("Chainsaw_van");
+
+		OnTarget ();
+	}
+
+	void OnTarget()
+	{
+		target = GameObject.Find (gameObject.name + "_gm").transform;
+
+		if (isOn) {
+>>>>>>> origin/master
 			item.transform.position = target.transform.position;
 			item.renderer.enabled = true;
 		}

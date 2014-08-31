@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{AD3ED7CE-31CF-C08B-97BB-AD07FFE23D16}") = "themysteryvan", "Assembly-CSharp-vs.csproj", "{15AFA8C3-1A36-5477-FC9E-41FABE7D779F}"
+Project("{E9937D88-A1A4-15A8-6C51-7876F2A8D0F3}") = "TheMysteryVan", "Assembly-CSharp-vs.csproj", "{24BA9AA6-D62E-8D1C-A645-59264A94514F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{15AFA8C3-1A36-5477-FC9E-41FABE7D779F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15AFA8C3-1A36-5477-FC9E-41FABE7D779F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15AFA8C3-1A36-5477-FC9E-41FABE7D779F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{15AFA8C3-1A36-5477-FC9E-41FABE7D779F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24BA9AA6-D62E-8D1C-A645-59264A94514F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24BA9AA6-D62E-8D1C-A645-59264A94514F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24BA9AA6-D62E-8D1C-A645-59264A94514F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24BA9AA6-D62E-8D1C-A645-59264A94514F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 																			GlobalSection(MonoDevelopProperties) = preSolution
+=======
+<<<<<<< HEAD
+													GlobalSection(MonoDevelopProperties) = preSolution
+=======
+																		GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> origin/master
+>>>>>>> origin/master
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
