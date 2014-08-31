@@ -23,16 +23,19 @@ public class ZombieAIScript : MonoBehaviour
 
 	void Update()
 	{
-		if(currentState == State.Attack) {
-			Vector3 direction = target.transform.position - transform.position;
-			direction.y = 0.0f;
+		if (target != null) {
 
-			transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.LookRotation(-direction),
-			                                      Time.deltaTime);
+			if (currentState == State.Attack) {
+					Vector3 direction = target.transform.position - transform.position;
+					direction.y = 0.0f;
 
-			if(direction.magnitude < attackRange) {
-				Vector3 moveVector = direction.normalized * speed * Time.deltaTime;
-				transform.position += moveVector;
+					transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.LookRotation (-direction),
+	                              Time.deltaTime);
+
+					if (direction.magnitude < attackRange) {
+							Vector3 moveVector = direction.normalized * speed * Time.deltaTime;
+							transform.position += moveVector;
+					}
 			}
 		}
 	}

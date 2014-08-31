@@ -3,6 +3,8 @@ using System.Collections;
 
 public class charater_movement : MonoBehaviour {
 
+	public Transform playertransform;
+
 	public float speed = 1.0f;
 
 	public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
@@ -25,12 +27,11 @@ public class charater_movement : MonoBehaviour {
 	float rotationY = 0F;
 
 	void Start () {
-
+		playertransform = transform;
 	}
 
 	void Update () {
 
-		print (rotationY);
 
 		movement = Vector3.zero;
 
@@ -40,10 +41,7 @@ public class charater_movement : MonoBehaviour {
 		if (axes == RotationAxes.MouseXAndY)
 		{
 			transform.Rotate(  Input.GetAxis("Mouse Y") * -sensitivityY, Input.GetAxis("Mouse X") * sensitivityX,0);
-			//float rotationX = /*transform.localEulerAngles.y*/ + Input.GetAxis("Mouse X") * sensitivityX;
 			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-			//rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-			//transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
 		}
 		else if (axes == RotationAxes.MouseX)
 		{
@@ -53,8 +51,6 @@ public class charater_movement : MonoBehaviour {
 		{
 			transform.Rotate( Input.GetAxis("Mouse Y") * -sensitivityY,0,0);
 			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-			//rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-			//transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
 		}
 
 
@@ -75,20 +71,11 @@ public class charater_movement : MonoBehaviour {
 			movement.z -= 1f;
 		}
 
-		if (Input.GetKeyUp ("a") || Input.GetKeyUp ("s") || Input.GetKeyUp ("w") || Input.GetKeyUp ("d")) {
+		/*if (Input.GetKeyUp ("a") || Input.GetKeyUp ("s") || Input.GetKeyUp ("w") || Input.GetKeyUp ("d")) {
 			
-			//this.rigidbody.velocity = new Vector3(0.0f,-0.17342f,0.0f);
+			this.rigidbody.velocity = new Vector3(0.0f,-0.17342f,0.0f);
 			
-		}
-		/*if (Input.GetMouseButtonDown (0)) {
-						
-						Vector3 position = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, distance);
-						position = Camera.main.ScreenToWorldPoint (position);
-						Instantiate (bullet_prefab, transform.position, Quaternion.identity);
-						transform.LookAt (position);
-						Debug.Log (position);
-						rigidbody.AddForce (transform.forward * 1000);
-				}*/
+		}*/
 
 		transform.Translate( movement * Time.deltaTime );
 	}
