@@ -4,36 +4,54 @@ using System.Collections.Generic;
 
 public class CharacterInventory: MonoBehaviour 
 {	
-	public GameObject item;
+	public GameObject item = null;
 	public bool withinRange;
+	public List<GameObject> existing = new List<GameObject> ();
 	public List<GameObject> inventory = new List<GameObject>();
 
 	void Start()
 	{
-		item = GameObject.FindWithTag ("Item");
+		GameObject[] items = GameObject.FindGameObjectsWithTag ("Item");
+
+		foreach (var i in items) {
+			existing.Add(i);
+			Debug.Log ("Added: " + i);
+		}
+
+		withinRange = false;
+		item = null;
 	}
 
 	void Update()
 	{
-		if (withinRange) {
+		if (withinRange && (existing.Contains(item))) {
 			if (Input.GetKeyDown (KeyCode.E)) {
 				inventory.Add(item);
-				item.gameObject.SetActive(false);
+
+				if(item != null) {
+					item.gameObject.SetActive(false);
+				}
+
+				withinRange = false;
 			}
 		}
+		item = null;
 	}
 
 	void OnTriggerStay(Collider other)
 	{
-		if (other.gameObject == item) {
+		if (existing.Contains(other.gameObject)) {
 			withinRange = true;
+			item = other.gameObject;
 		}
-	}
+	} 
 
 	void OnTriggerExit(Collider other)
 	{
-		if (other.gameObject == item) {
+		if(existing.Contains(other.gameObject)) {
 			withinRange = false;
+			item = null;
 		}
 	}
+
 }
