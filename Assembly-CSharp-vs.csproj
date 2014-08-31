@@ -5,7 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
+<<<<<<< HEAD
 	<ProjectGuid>{24BA9AA6-D62E-8D1C-A645-59264A94514F}</ProjectGuid>
+=======
+	<ProjectGuid>{15AFA8C3-1A36-5477-FC9E-41FABE7D779F}</ProjectGuid>
+>>>>>>> 4d9887d002c340d1f9ac36df731fefecade9bfca
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,10 +50,19 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
      <Compile Include="Assets\scripts\Inventory.cs" />
      <Compile Include="Assets\scripts\MoveVan.cs" />
      <Compile Include="Assets\scripts\itemPickUp.cs" />
      <Compile Include="Assets\scripts\moveRoad.cs" />
+=======
+     <Compile Include="Assets\bullet.cs" />
+     <Compile Include="Assets\bullet_destory.cs" />
+     <Compile Include="Assets\models\move.cs" />
+     <Compile Include="Assets\scripts\camera_movement.cs" />
+     <Compile Include="Assets\scripts\charater_movement.cs" />
+     <Compile Include="Assets\scripts\spawner.cs" />
+>>>>>>> 4d9887d002c340d1f9ac36df731fefecade9bfca
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
