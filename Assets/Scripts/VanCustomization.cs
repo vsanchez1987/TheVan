@@ -14,23 +14,17 @@ public class VanCustomization : MonoBehaviour
 	private GameObject van;
 	private CharacterInventory playerInventory;
 
-	public List<string> copyInventory = new List<string>();
-
 	void Awake()
 	{
 		van = GameObject.FindGameObjectWithTag ("Van");
 		playerInventory = GameObject.FindWithTag ("Player").GetComponent<CharacterInventory> ();
 		DontDestroyOnLoad (van);
-
-		foreach (var str in playerInventory.inventory) {
-			copyInventory.Add (str.name);
-		}
 	}
 	
 	public void OnClick()
 	{
 		isOn = true;
-		item = GameObject.Find ("Chainsaw");
+		item = GameObject.Find ("Chainsaw_van");
 
 		OnTarget ();
 	}
