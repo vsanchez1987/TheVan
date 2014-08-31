@@ -1,12 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/spawner.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../TimGlasser/fsm/WaypointScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/health.cs" Line="30" Column="18" />
-      <File FileName="Assets/bullet.cs" Line="22" Column="35" />
-      <File FileName="Assets/Scripts/camera_movement.cs" Line="15" Column="2" />
-      <File FileName="Assets/Scripts/ZombieAIScript.cs" Line="33" Column="42" />
-      <File FileName="Assets/Scripts/spawner.cs" Line="18" Column="25" />
+      <File FileName="Assets/Scripts/health.cs" Line="18" Column="21" />
+      <File FileName="Assets/bullet.cs" Line="16" Column="48" />
+      <File FileName="Assets/Scripts/camera_movement.cs" Line="33" Column="32" />
+      <File FileName="Assets/Scripts/ZombieAIScript.cs" Line="26" Column="24" />
+      <File FileName="Assets/Scripts/charater_movement.cs" Line="60" Column="4" />
+      <File FileName="Assets/Scripts/spawner.cs" Line="18" Column="21" />
+      <File FileName="../TimGlasser/fsm/WaypointScript.cs" Line="41" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
