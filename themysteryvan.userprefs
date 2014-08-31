@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/MoveVan.cs">
     <Files>
@@ -6,6 +7,16 @@
       <File FileName="Assets/scripts/Inventory.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/itemPickUp.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/moveRoad.cs" Line="1" Column="1" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/spawner.cs">
+    <Files>
+      <File FileName="Assets/Scripts/health.cs" Line="30" Column="18" />
+      <File FileName="Assets/bullet.cs" Line="22" Column="35" />
+      <File FileName="Assets/Scripts/camera_movement.cs" Line="15" Column="2" />
+      <File FileName="Assets/Scripts/ZombieAIScript.cs" Line="33" Column="42" />
+      <File FileName="Assets/Scripts/spawner.cs" Line="18" Column="25" />
+>>>>>>> origin/master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

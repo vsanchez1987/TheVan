@@ -46,9 +46,17 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CharacterInventory.cs" />
+     <Compile Include="Assets\Scripts\DemoPlayerControls.cs" />
+     <Compile Include="Assets\Scripts\ZombieAIScript.cs" />
+     <Compile Include="Assets\Scripts\camera_movement.cs" />
+     <Compile Include="Assets\Scripts\charater_movement.cs" />
+     <Compile Include="Assets\Scripts\health.cs" />
+     <Compile Include="Assets\Scripts\spawner.cs" />
      <Compile Include="Assets\bullet.cs" />
      <Compile Include="Assets\bullet_destory.cs" />
      <Compile Include="Assets\models\move.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\scripts\CharacterInventory.cs" />
      <Compile Include="Assets\scripts\DemoPlayerControls.cs" />
      <Compile Include="Assets\scripts\Inventory.cs" />
@@ -60,6 +68,8 @@
      <Compile Include="Assets\scripts\moveRoad.cs" />
      <Compile Include="Assets\scripts\spawner.cs" />
      <Compile Include="Assets\scripts\vanMove2.cs" />
+=======
+>>>>>>> origin/master
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

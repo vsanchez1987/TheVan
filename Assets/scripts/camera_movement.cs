@@ -19,11 +19,11 @@ public class camera_movement : MonoBehaviour {
 	
 	void Start () {
 		Screen.showCursor = false;
+		Screen.lockCursor = true;
 	}
 	
 	void Update () {
-		
-				print (rotationY);
+
 		
 				movement = Vector3.zero;
 		
@@ -36,17 +36,12 @@ public class camera_movement : MonoBehaviour {
 		
 				if (axes == RotationAxes.MouseXAndY) {
 						transform.Rotate (Input.GetAxis ("Mouse Y") * -sensitivityY, Input.GetAxis ("Mouse X") * sensitivityX, 0);
-						//float rotationX = /*transform.localEulerAngles.y*/ + Input.GetAxis("Mouse X") * sensitivityX;
 						rotationY += Input.GetAxis ("Mouse Y") * sensitivityY;
-						//rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-						//transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
 				} else if (axes == RotationAxes.MouseX) {
 						transform.Rotate (0, Input.GetAxis ("Mouse X") * sensitivityX, 0);
 				} else {
 						transform.Rotate (Input.GetAxis ("Mouse Y") * -sensitivityY, 0, 0);
 						rotationY += Input.GetAxis ("Mouse Y") * sensitivityY;
-						//rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-						//transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
 				}
 		}
 
