@@ -64,7 +64,9 @@
      <Compile Include="Assets\Scripts\itemPickUp.cs" />
      <Compile Include="Assets\Scripts\moveRoad.cs" />
      <Compile Include="Assets\Scripts\spawner.cs" />
+     <Compile Include="Assets\breakparent.cs" />
      <Compile Include="Assets\models\move.cs" />
+     <Compile Include="Assets\movePlatform.cs" />
      <Compile Include="Assets\van_control.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
